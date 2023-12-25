@@ -1,0 +1,104 @@
+/* ------------------ General ----------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7ecde;
+  font-family: 'PT Sans Caption', sans-serif;
+  min-height: 100vh;
+  line-height: 1.2;
+}
+
+::selection {
+  background: #fec260;
+  color: #000000;
+}
+
+/* ---------------- App header ---------------- */
+.header {
+  border-bottom: 2px dotted #000000;
+}
+
+.header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.125rem;
+  width: fit-content;
+}
+
+.header h1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.header h1:hover::before {
+  height: 65%;
+}
+
+/* -------------- Bookmark inputs ------------- */
+.description {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.5625rem;
+  background-image: linear-gradient(to right, #3ea55b, #fec260);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bookmark-data-inputs__group .form-control:focus:not(.is-valid, .is-invalid) {
+  border-color: #d99c39;
+  box-shadow: 0 0 0 4px rgba(254, 194, 98, 0.333);
+}
+
+/* ------------- Message modal box ------------ */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay i {
+  cursor: pointer;
+}
+
+/* ----------- Bookmarks table view ----------- */
+.btn-submit,
+.btn-visit,
+.btn-delete,
+.btn:is(.btn-submit, .btn-visit, .btn-delete):is(:hover) {
+  color: #ffffff;
+}
+
+.btn-submit {
+  background-color: #d1512d;
+  border-color: #d1512d;
+}
+
+.btn.btn-submit:is(:hover, :focus) {
+  background-color: #bb4120;
+  border-color: #a03315;
+}
+
+.btn-delete {
+  background-color: #eb1d36;
+  border-color: #eb1d36;
+}
+
+.btn.btn-delete:is(:hover, :focus) {
+  background-color: #d30820;
+  border-color: #ba081d;
+}
+
+.btn-visit {
+  background-color: #9eb23b;
+  border-color: #9eb23b;
+}
+
+.btn.btn-visit:is(:hover, :focus) {
+  background-color: #8a9e23;
+  border-color: #6e8018;
+}
